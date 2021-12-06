@@ -43,7 +43,7 @@ def main():
             with open('data.csv', 'w') as f:
                 f.write(data)
         elif choice == '2':
-            print("Write data to Arduino")
+            print("Feature not yet implemented : Write data to Arduino")
         else:
             print("Invalid choice")
         choice = menu()
