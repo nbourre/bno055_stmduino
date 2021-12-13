@@ -24,8 +24,13 @@ void setup(void)
 {
   Serial.begin(115200);
   Serial.println("Orientation Sensor Test"); Serial.println("");
+  
+#if ARDUINO_GENERIC_L476RGTX
+// S'applique seulement si le board est un L476RG
   Wire.setSDA(A4);
   Wire.setSCL(A5);
+#endif
+
   if(!bno.begin())
   {
     Serial.print("Ooops, no BNO055 detected ... Check your wiring or I2C ADDR!");
